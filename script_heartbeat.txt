@@ -1,0 +1,13 @@
+#/bin/bash
+
+# 0 ruim, 1 bom
+
+STAT=`/usr/bin/cl_status rscstatus`
+
+#echo $STAT
+
+if [ "$STAT" = "all" ] || [ "$STAT" = "local" ]; then
+  echo 1
+else
+  echo 0
+fi
